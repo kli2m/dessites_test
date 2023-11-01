@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
 </head>
+
 <body>
-  
+    <header class="header">
+        <div class="header__logo">
+            <a class="header__logo_link logo-link" href="https://example.com">
+                <img class="logo-link_img" src="./assets//logo.svg" alt="logo"></img>
+            </a>
+        </div>
+
+        <div class="header__menu-block">
+
+            <nav class="header__menu-block_navigate nav">
+                <ul>
+                    <a class="nav__link" href="#">
+                        <li class="nav__link_item">
+                            Каталог
+                        </li>
+                    </a>
+                    <a class="nav__link" href="#">
+                        <li class="nav__link_item">
+                            О компании
+                        </li>
+                    </a>
+                    <a class="nav__link" href="#">
+                        <li class="nav__link_item">
+                            Новости
+                        </li>
+                    </a>
+                    <a class="nav__link" href="#">
+                        <li class="nav__link_item">
+                            Контакты
+                        </li>
+                    </a>
+                    <a class="nav__link" href="#">
+                        <li class="nav__link_item">
+                            Вакансии
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__contacts contacts">
+            <div class="contacts__phone">
+                <a href="tel:375337777777">+375337777777</a>
+            </div>
+            <div class="contacts__social social">
+                <div class="social__viber messenger">
+                    <a href="viber://chat?number=%2B+375337777777">
+                        <img src="./assets//viber.png" alt="viber logo">
+                    </a>
+                </div>
+                <div class="social__whatsapp messenger">
+                    <a href="https://wa.me/375337777777">
+                        <img src="./assets//whatsapp.png" alt="whatsapp logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <h1 class="main__title">Панели из сотового картона</h1>
+        <div class="main__content content">
+            <div class="content__img-block">
+                <img class="content__img-block_img" src="./assets/panel.jpg" alt="panel main img">
+            </div>
+            <div class="content__about">
+                <p class="content__about_description">Сотовые панели представляют собой трехслойные изделия, состоящие из одного внутреннего слоя - сотового картонного заполнителя с шестигранной формой ячеек и двух плоских наружных слоев картона, приклеенных к заполнителю с обеих сторон клеем
+                    ПВА. Толщина сотовых плит, выпускаемых предприятием варьируется от 6мм до 100мм. Они могут быть изготовлены из мелованного, макулатурного или крафт-картона.</p>
+                <p class="content__about_price"> Цена: <span> 5$ </span> за м.кв.</p>
+                <div class="content__about_actions btn">
+                    <button class="btn_pay">Купить сейчас</button>
+                    <button class="btn_info">Показать более подробную информацию</button>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
