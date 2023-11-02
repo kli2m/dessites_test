@@ -77,6 +77,8 @@ html
   width: 100%
   padding: 24px 48px 24px 48px
   box-sizing: border-box
+  border-bottom: 2px solid $dark
+
   &__title
     display: flex
     justify-content: center
@@ -103,3 +105,94 @@ html
           margin: 0 10px
           font-size: $fontsize_big
           color: $error
+      &_actions
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 20px
+        .btn_pay,.btn_info
+          width: fit-content
+          height: 50px
+          border: 1px solid $second
+          background: $second
+          color: $light
+          border-radius: 5px
+          padding: 10px
+          box-sizing: content-box
+          cursor: pointer
+.feedback
+  width: 300px
+  height: fit-content
+  position: fixed
+  bottom: 10px
+  right: 10px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  padding: 8px
+  box-sizing: content-box
+  border: 1px solid $second
+  border-radius: 5px
+  background: $second
+  // opacity: 0.9  
+  animation: emergence 5s linear
+  &__close
+    width: 20px
+    height: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    background: $second
+    border: none
+    border-radius: 50%
+    position: absolute
+    top: 10px
+    right: 10px
+    &:hover
+      background: $second
+      color: $light
+  &__title
+    width: 100%
+    font-size: $fontsize_big
+    font-weight: 600
+    text-align: center
+    color: $light
+.form
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  gap: 10px
+  &__item
+    width: 100%
+    display: flex
+    justify-content: space-between
+    &_label
+      width: fit-content
+      margin-right: 5px
+    &_text
+      width: 180px
+      resize: none
+      overflow-y: scroll
+      overflow-wrap: break-word
+      padding: 5px
+      box-sizing: border-box
+      background: $accent
+      font-size: $fontsize_normal
+      color: $second
+  &__sbmt
+    width: 100px
+    height: 30px
+    background: $background
+    color: $second
+    border: 1px solid $background
+    cursor: pointer
+    &:hover
+      background: $second
+      color: $light
+
+.closed
+  display: none

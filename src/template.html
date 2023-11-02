@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./index.js"></script>
     <title>Test</title>
+
 </head>
 
 <body>
@@ -82,6 +84,25 @@
             </div>
         </div>
     </main>
+    <section class="feedback">
+        <button class="feedback__close">X</button>
+        <p class="feedback__title">Оставьте заявку на расчет стоимости</p>
+        <form action="" onsubmit="return false" class="feedback__form form">
+            <div class="form__item">
+                <label class="form__item_label" for="name">Имя:</label>
+                <input class="form__item_text" type="text" name="name" id="name">
+            </div>
+            <div class="form__item">
+                <label class="form__item_label" for="phone">Телефон:</label>
+                <input class="form__item_text" type="tel" name="phone" id="phone">
+            </div>
+            <div class="form__item">
+                <label class="form__item_label" for="message">Сообщение:</label>
+                <textarea class="form__item_text" name="message" id="message" rows="3"></textarea>
+            </div>
+            <input class="form__sbmt" type="submit">
+        </form>
+    </section>
 </body>
 
 </html>
