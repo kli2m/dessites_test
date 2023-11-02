@@ -1,0 +1,30 @@
+// color consts
+$accent: #F2F2F2
+$dark: #363636
+$light: #ffffff
+$second: #BFC4C9
+$error: #F42C4F
+$background: #F9F9FA
+$second: #dc7a43
+
+//font consts
+$fontsize_large: 32px
+$fontsize_big: 24px
+$fontsize_normal: 14px
+$fontsize_small: 12px
+
+// mixins
+@mixin font($fname, $fstyle, $fweight, $furl)
+  @font-face
+    font-family: $fname
+    font-style: $fstyle
+    font-weight: $fweight
+    src: url($furl) format('woff2')
+
+//    keyframes
+
+@keyframes emergence
+  0%
+    opacity: 0
+  100%
+    opacity: 0.9

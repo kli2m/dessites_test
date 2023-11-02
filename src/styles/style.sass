@@ -1,7 +1,198 @@
 @import url('./normalize.css')
+@import "./_config"
 
+@include font('montserrat',normal,400,'../fonts/Montserrat-Regular.ttf')
 
 html
   width: 100vw
   height: 100vh
 
+  body
+    background: $accent
+    box-sizing: content-box
+    font-family: 'montserrat'
+    max-width: 1440px
+    max-height: 1265px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    flex-direction: column
+.header
+  width: 100%
+  min-height: 96px
+  padding: 24px 48px 24px 48px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  box-sizing: border-box
+  border-bottom: 2px solid $dark
+
+  & .logo-link_img
+    width: 120px
+    height: 120px
+  &__menu-block
+    display: flex
+    flex-direction: column
+    &_navigate ul
+      display: flex
+      list-style: none
+      gap: 5px
+      .nav__link
+        line-height: 40px
+        text-wrap: nowrap
+        border: 1px solid $second
+        border-radius: 5px
+        text-decoration: none
+        color: $accent
+        box-sizing: content-box
+        :hover
+          background: $light
+        &_item
+          font-size: $fontsize_big
+          font-weight: 500
+          color: $dark
+          padding: 10px
+          box-sizing: content-box
+  &__contacts
+    display: flex
+    flex-direction: column
+    gap: 10px
+    .contacts__phone
+      width: fit-content
+      height: 100%
+      & a
+        color: $dark
+        font-size: $fontsize_large
+        text-decoration: none
+        &:hover
+          color: $second
+    .contacts__social
+      display: flex
+      justify-content: space-around
+      align-items: center
+      & .messenger > a > img
+        width: 70px
+        height: 70px
+.main
+  width: 100%
+  padding: 24px 48px 24px 48px
+  box-sizing: border-box
+  border-bottom: 2px solid $dark
+
+  &__title
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 50px
+    font-size: $fontsize_large
+  .content
+    width: 100%
+    height: 100%
+    display: flex
+    & img
+      width: 400px
+      height: 250px
+    &__about
+      width: 100%
+      margin: 10px 20px 10px
+      box-sizing: border-box
+      &_description
+        font-size: $fontsize_big
+        text-align: justify
+      &_price
+        font-size: $fontsize_normal
+        & span
+          margin: 0 10px
+          font-size: $fontsize_big
+          color: $error
+      &_actions
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 20px
+        .btn_pay,.btn_info
+          width: fit-content
+          height: 50px
+          border: 1px solid $second
+          background: $second
+          color: $light
+          border-radius: 5px
+          padding: 10px
+          box-sizing: content-box
+          cursor: pointer
+.feedback
+  width: 300px
+  height: fit-content
+  position: fixed
+  bottom: 10px
+  right: 10px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  padding: 8px
+  box-sizing: content-box
+  border: 1px solid $second
+  border-radius: 5px
+  background: $second
+  // opacity: 0.9  
+  animation: emergence 5s linear
+  &__close
+    width: 20px
+    height: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    background: $second
+    border: none
+    border-radius: 50%
+    position: absolute
+    top: 10px
+    right: 10px
+    &:hover
+      background: $second
+      color: $light
+  &__title
+    width: 100%
+    font-size: $fontsize_big
+    font-weight: 600
+    text-align: center
+    color: $light
+.form
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  gap: 10px
+  &__item
+    width: 100%
+    display: flex
+    justify-content: space-between
+    &_label
+      width: fit-content
+      margin-right: 5px
+    &_text
+      width: 180px
+      resize: none
+      overflow-y: scroll
+      overflow-wrap: break-word
+      padding: 5px
+      box-sizing: border-box
+      background: $accent
+      font-size: $fontsize_normal
+      color: $second
+  &__sbmt
+    width: 100px
+    height: 30px
+    background: $background
+    color: $second
+    border: 1px solid $background
+    cursor: pointer
+    &:hover
+      background: $second
+      color: $light
+
+.closed
+  display: none
